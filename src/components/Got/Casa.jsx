@@ -1,7 +1,6 @@
-import React, { Component } from "react";
-import Personagem from "./Personagem";
+import React from "react";
 //import Personagem from "./Personagem";
-
+/*
 class Casa extends Component {
     render() {
         const {titulo} = this.props
@@ -20,7 +19,7 @@ class Casa extends Component {
             </div>
         )
     }
-}
+}*/
 /*
 class Casa extends Component {
     render() {
@@ -32,3 +31,23 @@ class Casa extends Component {
     }
 }
 */
+
+const Casa = (props) => {
+    //const {casa} = props
+    return (
+        <div>
+            <h1 style={{color:'red'}}> Casa {props.casa} </h1>
+            ====================================================
+            {
+                React.Children.map(
+                    props.children,
+                    (personagem) => {
+                        return React.cloneElement(personagem, {...props})
+                    }
+                )
+            }
+        </div>
+        
+    )
+}
+export default Casa
