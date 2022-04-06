@@ -6,9 +6,46 @@ import './App.css';
 //import Questao02 from './components/Atividade01/Questao02';
 //import Questao03 from './components/Atividade01/Questao03';
 //import Questao04 from './components/Atividade01/Questao04';
-import Casa from './components/Got/Casa';
-import Personagem from './components/Got/Personagem';
+//import Casa from './components/Got/Casa';
+//import Personagem from './components/Got/Personagem';
+import World from './components/Atividade02/World';
+import Arena from './components/Atividade02/Arena';
+import Hero from './components/Atividade02/Hero';
+import Enemy from './components/Atividade02/Enemy';
+
+
+/*const App = () =>
+  <div className="App">
+    <h1> a</h1>
+    
+      
+        <Hero nome="Sicrano de Tal" />
+        <Enemy nome="Fulano de Tal" />
+  </div>
+*/
 const App = () =>
+  <div className="App">
+    <World>
+      <Arena arena="Final Millenium Tower">
+        <Hero nome="Kiryu" />
+        <Enemy nome="NIshikiyama" />
+      </Arena>
+      <Arena arena="Jujutsu High">
+        <Hero nome="Gojo Satoru" />
+        <Enemy nome="Fushiguro Toji" />
+      </Arena>
+      <Arena arena="Cidade Viking ">
+        <Hero nome="Thorfinn" />
+        <Enemy nome="Askeladd" />
+      </Arena>
+    </World>
+  </div>
+
+
+
+
+
+/*const App = () =>
   <div className="App">
     <Casa casa="Targeryan" localizacao="Winterfell">
       <Personagem nome="Arya"/>
@@ -18,7 +55,7 @@ const App = () =>
       <Personagem nome="Ned"/>
     </Casa>
   </div>
-
+*/
 
 /*function App() {
   return (
